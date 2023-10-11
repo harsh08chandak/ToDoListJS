@@ -109,4 +109,9 @@ color: red;
     width: 100%;
     max-width: 440px;
 }
+.row button{
+    position: absolute;
+    top: 265px;
+    left: 146px;
+}
 }
