@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    /* background:linear-gradient(140deg, #0759f1, #f6df94); */
+    padding: 10px;
+}
+.todo-app{
+    width: 100%;
+    max-width: 540px;
+    background: #00000099;
+    margin: 100px auto 20px ;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+
+.todo-app h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    color: #ffc107;
+    font-size: 30px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.todo-app h2 img{
+    width: 50px;
+    margin-left: 10px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background:#edeef0 ;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+.row input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+}
+.row button{
+    outline: none;
+    border: none;
+    padding: 16px 50px;
+    background: #ffc107;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+ul li{
+    list-style: none;
+    font-size:17px ;
+    font-weight:bold;
+    padding: 12px 8px 12px 50px;
+    user-select: none;    
+    cursor: pointer;
+    color: #fff;
+    position: relative;
+}
+
+ul li::before{
+    content:"";
+    position: absolute;
+    top: 0;
+    left: -20px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-image: url(uncheck.jpg);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.checked{
+    /* color: #555; */
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(checked.jpg);
+}
+li span{
+    position: absolute;
+    right: 20px;
+    font-size: 28px;
+}
+li span:hover{
+color: red;
+}
+
+@media only screen and (max-width: 420px)
+{
+.todo-app
+{
+    width: 100%;
+    max-width: 440px;
+}
+}
